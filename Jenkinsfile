@@ -27,5 +27,10 @@
                     }
                 }
             }
+            stage('Confirming build success') {
+                steps{  
+                    writeFile file: 'recommendationservice.txt', text: 'Build is completed successfully.'
+                    }
+            }
         }
     }
